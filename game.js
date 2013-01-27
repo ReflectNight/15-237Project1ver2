@@ -4,7 +4,7 @@
 
 // drawBG(): Draws the background.
 function drawBG(){
-	ctx.drawImage(worldMap[currentWorld].img, 0, 0, 450, 450); // resize to 150x150
+	ctx.drawImage(worldMap[currentWorld].img, 0, 0, 450, 450);
 }
 
 // drawObjAbove(playerLoc): Draws all objects above the player.
@@ -38,7 +38,6 @@ function drawObjBelow(playerLoc){
 				if (worldMap[currentWorld].grid[i][j].type === "item")
 				{
 					if(worldMap[currentWorld].grid[i][j].onScreen){
-						//console.log(worldMap[currentWorld].grid[i][j].name);
 						ctx.drawImage(worldMap[currentWorld].grid[i][j].img, 
 							i*50, j*50 + 90);
 					}
@@ -53,7 +52,7 @@ function drawObjBelow(playerLoc){
 // onTimer(): Handles the event when page is refreshed. 
 function onTimer(){
 	var pos = getPlayerPos();
-
+	
 	drawBG();
 	drawObjAbove(pos.y);
 	drawPlayer();
@@ -68,8 +67,7 @@ function run(){
 	ctx.fillStyle = "#000";
 	ctx.fillRect(0, 0, canvasWidth, canvasHeight);
 	
-	drawSidebar();
 	drawDialogue();
-	
+	drawSidebar();
 	intervalID = setInterval(onTimer, timerDelay);
 }

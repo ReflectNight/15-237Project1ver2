@@ -3,17 +3,17 @@
  */
 
 function drawSidebar(){
+var statsBar = new Image();
+	statsBar.src = "Images/Worlds/stats.png";
+	ctx.drawImage(statsBar, gameWidth, 0);
+	
+	var itemBar = new Image();
+	itemBar.src = "Images/Worlds/item.png";
+	ctx.drawImage(itemBar, gameWidth, 150);
 
-  var size=150;
-
-  ctx.fillStyle="rgb(10,40,50)";
-  ctx.fillRect(gameWidth,0,size,size);
-
-  ctx.fillStyle="rgb(10,200,50)";
-  ctx.fillRect(gameWidth,150,size,size);
-
-  ctx.fillStyle="rgb(200,40,50)";
-  ctx.fillRect(gameWidth,300,size,size);
+	var turnBar = new Image();
+	turnBar.src = "Images/Worlds/turns.png";
+	ctx.drawImage(turnBar, gameWidth, 300);
 }
 
 function updateStats(){

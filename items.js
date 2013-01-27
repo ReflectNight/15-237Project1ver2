@@ -17,7 +17,7 @@ function pickUp(item){
 	worldMap[currentWorld].grid[player.item.x][player.item.y] = undefined;
 	
 	drawDialogue();
-	printDialogue("you have picked up "+item.name+"!");//this could be randomized
+	printDialogue("You have picked up "+item.name+"!");
 }
 
 function switchItem(newItem){
