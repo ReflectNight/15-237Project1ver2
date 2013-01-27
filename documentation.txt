@@ -1,0 +1,120 @@
+documentation.txt
+
+If you're curious whether a variable/function name has already been used,
+please consult these lists.
+
+--Variable List--
+data.js:
+	canvas
+	ctx
+	canvasHeight
+	canvasWidth
+	canvasCenter
+	gameHeight
+	gameWidth
+	
+	startPage
+	instPage
+	creditPage
+	gameMode
+	sqx
+	sqw
+	sqh
+
+	numItems
+	item[]
+		item[i].type
+		item[i].ID
+		item[i].name
+		item[i].description1
+		item[i].description2
+		item[i].img
+			item[i].img.src
+		item[i].onScreen
+		item[i].world
+		item[i].x
+		item[i].y
+		
+	numFree
+	numHint
+	numNPCs
+	NPC[]
+		NPC[i].type
+		NPC[i].ID
+		NPC[i].name
+		NPC[i].img
+			NPC[i].img.src
+		NPC[i].bookLevel
+		NPC[i].strLevel
+		NPC[i].freeDialogue[]
+		NPC[i].freeIndex
+		NPC[i].hintDialogue[]
+		NPC[i].hintIndex
+		NPC[i].itemID
+		NPC[i].world
+		NPC[i].x
+		NPC[i].y
+		NPC[i].done
+		
+		
+	player
+		player.x
+		player.y
+		player.dir
+		player.img
+			player.img.src
+		player.item
+	moveUp
+	moveDown
+	moveLeft
+	moveRight
+	numTurns
+	
+	numWorlds
+	worldMap[]
+		worldMap[i].ID
+		worldMap[i].img
+			worldMap[i].img.src
+		worldMap[i].grid[x][y]
+	state
+	currentWorld
+	inventory
+	
+	intervalID
+	timerDelay
+
+--Function List--
+menu.js
+	drawStartPage()
+	drawInstructions()
+	drawCredit()
+	
+items.js
+	itemAction()
+	pickUp(item)
+	switchitem(onHand,newItem)
+
+NPCs.js
+	npcAction(npc,item)
+	talk(npc)
+	hasItem(npc,item)
+	
+world.js
+	drawTeleportMenu()
+	goToWorld(label)
+
+player.js
+	getPlayerPos()
+	drawPlayer()
+	doAction()
+	
+listener.js
+	updateDown(keyCode, x)
+	updateUp(keyCode, x)
+	onKeyDown(evt)
+	onKeyUp(evt)
+	
+game.js
+	drawBG()
+	onTimer()
+	run()
