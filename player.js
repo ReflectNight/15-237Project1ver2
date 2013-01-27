@@ -6,10 +6,10 @@
 // getPlayerPos(): Gets the 50x50 square the player is inhabiting.
 function getPlayerPos(){
 	var pos = new Object();
-	pos.x = Math.ceil(player.x / 50);
-	pos.y = Math.ceil((player.y - 100)/ 50);
+	pos.x = Math.floor((player.x + 10) / 50);
+	pos.y = Math.floor((player.y - 80)/ 50);
 	
-	//console.log("Player position: (" + pos.x + ", " + pos.y + ")");
+	console.log("Player position: (" + pos.x + ", " + pos.y + ")");
 	return pos;
 }
 
@@ -18,13 +18,13 @@ function drawPlayer(){
 	if (moveUp)
 	{
 		player.dir = 2;
-		if (100 <= player.y)	
+		if (90 <= player.y)	
 			player.y -= 5;
 	}
 	else if (moveDown)
 	{
 		player.dir = 0;
-		if (player.y <= (gameHeight - 50))	
+		if (player.y <= (gameHeight - 64))	
 			player.y += 5;
 	}
 	else if (moveLeft)
@@ -36,22 +36,22 @@ function drawPlayer(){
 	else if (moveRight)
 	{
 		player.dir = 3;
-		if (player.x <= (gameWidth - 50))	
+		if (player.x <= (gameWidth - 42))	
 			player.x += 5;
 	}
 	
 	switch (player.dir){
 		case 0:
-			ctx.drawImage(player.img,0,0,50,50,player.x, player.y,50,50);
+			ctx.drawImage(player.sprite[0][0], player.x, player.y);
 			break;
 		case 1:
-			ctx.drawImage(player.img,100,0,50,50,player.x, player.y,50,50);
+			ctx.drawImage(player.sprite[1][0], player.x, player.y);
 			break;
 		case 2:
-			ctx.drawImage(player.img,45,0,50,50,player.x, player.y,50,50);
+			ctx.drawImage(player.sprite[2][0], player.x, player.y);
 			break;
 		case 3:
-			ctx.drawImage(player.img,150,0,50,50,player.x, player.y,50,50);
+			ctx.drawImage(player.sprite[3][0], player.x, player.y);
 			break;
 		default:
 			break;

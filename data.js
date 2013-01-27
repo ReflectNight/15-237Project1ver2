@@ -3,12 +3,6 @@
  *		item, NPC, world, dialogue, achievement, etc.
 */
 
-/** PSA: PLEASE BE CAREFUL WHEN WRITING CODE. CHECK HERE FIRST, OR THE README 
-		TO SEE IF A VARIABLE NAME HAS ALREADY BEEN USED. REMEMBER TO UPDATE 
-		documentation.txt TOO. **/
-		
-/** Also this file is going huge sorry **/
-
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // menu.js Variables
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -181,8 +175,20 @@ player.x = gameWidth/2 - 25;
 player.y = gameHeight/2 - 25;
 // 0 : forward, 1 : left, 2 : back, 3 : right
 player.dir = 0;
-player.img = new Image();
-player.img.src = "Images/smiley.png";
+player.sprite = new Array(4); // 0: down, 1: left, 2: up, 3: right
+for(var i = 0; i < 4; i++)
+{
+	player.sprite[i] = new Array(3);
+	for (var j = 0; j < 3; j++)
+	{
+		player.sprite[i][j] = new Image();
+	}
+}
+//player.img.src = "Images/smiley.png"; //PICTURES HERE
+player.sprite[0][0].src = "Images/Player/sampleplayer.png";
+player.sprite[1][0].src = "Images/Player/sampleplayerleft.png";
+player.sprite[2][0].src = "Images/Player/sampleplayerback.png";
+player.sprite[3][0].src = "Images/Player/sampleplayerright.png";
 player.item = null;
 
 var moveUp = false;

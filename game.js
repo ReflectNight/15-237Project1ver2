@@ -10,14 +10,13 @@ function drawBG(){
 // drawObjAbove(playerLoc): Draws all objects above the player.
 function drawObjAbove(playerLoc){
 	for (var i = 0; i < worldMap[currentWorld].grid.length; i++)
-		for (var j = 0; j < playerLoc; j++)
+		for (var j = 0; j <= playerLoc; j++)
 		{
 			if (worldMap[currentWorld].grid[i][j] !== undefined)
 			{
 				if (worldMap[currentWorld].grid[i][j].type === "item")
 				{
 					if(worldMap[currentWorld].grid[i][j].onScreen){
-						//console.log(worldMap[currentWorld].grid[i][j].name);
 						ctx.drawImage(worldMap[currentWorld].grid[i][j].img, 
 							i*50, j*50 + 90);
 					}
@@ -32,7 +31,7 @@ function drawObjAbove(playerLoc){
 // drawObjBelow(playerLoc): Draws all objects below the player.
 function drawObjBelow(playerLoc){
 	for (var i = 0; i < worldMap[currentWorld].grid.length; i++)
-		for (var j = playerLoc; j < worldMap[currentWorld].grid[0].length; j++)
+		for (var j = playerLoc + 1; j < worldMap[currentWorld].grid[0].length; j++)
 		{
 			if (worldMap[currentWorld].grid[i][j] !== undefined)
 			{
