@@ -1,7 +1,5 @@
 ERRORS:
 -there is no sidebar
--items are replaced where they were originally
-
 -add instructions for teleportation
 -add welcome text
 -make multiline text work

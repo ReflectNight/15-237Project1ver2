@@ -14,6 +14,7 @@ function itemAction(obj){
 function pickUp(item){
   player.item = item;
 	item.onScreen = false;
+	worldMap[currentWorld].grid[player.item.x][player.item.y] = undefined;
 	
 	drawDialogue();
 	printDialogue("you have picked up "+item.name+"!");//this could be randomized
@@ -24,7 +25,6 @@ function switchItem(newItem){
 	newItem.onScreen = false;
 	
 	worldMap[currentWorld].grid[newItem.x][newItem.y] = player.item;
-	worldMap[currentWorld].grid[player.item.x][player.item.y] = undefined;
 	
 	player.item.x=newItem.x;
 	player.item.y=newItem.y;

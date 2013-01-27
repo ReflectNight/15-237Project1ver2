@@ -152,13 +152,11 @@
 	NPC[0].img.src = "Images/NPCs/sampleNPC.png";
 	NPC[0].bookLevel = 0;
 	NPC[0].strLevel = 0;
-	NPC[0].freeDialogue[0] = "I am a sample NPC.";
-	NPC[0].freeDialogue[1] = "This is sample dialogue.";
+	NPC[0].freeDialogue = ["I am a sample NPC.", "This is sample dialogue."];
 	NPC[0].freeIndex = 0;
 	NPC[0].rejectDialogue = "Not my item.";
 	NPC[0].acceptDialogue = "Thank you for the item!";
-	NPC[0].hintDialogue[0] = "This is a hint.";
-	NPC[0].hintDialogue[1] = "This is also a hint.";
+	NPC[0].hintDialogue = ["This is a hint.", "This is also a hint."];
 	NPC[0].hintIndex = 0;
 	NPC[0].itemID = 3; //chicken
 	NPC[0].world = 0;
