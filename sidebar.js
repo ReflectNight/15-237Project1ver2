@@ -16,9 +16,13 @@ function drawTurnBar(){
 
 function updateStats(){
 	drawStatsBar();
-  //to be completed
-  //this is you
-  //happyface
+	ctx.fillStyle = "white";
+	ctx.fillRect(gameWidth + 25, 30, 100, 100);
+  ctx.textAlign = 'left';
+  ctx.font="16pt Monospace";
+  ctx.fillStyle="#000";
+  ctx.fillText("Str: " + player.str,485,70);
+	ctx.fillText("Int: " + player.int,485,90);
 }
 
 function updateItem(){
@@ -34,7 +38,6 @@ function updateMoves(){
 	drawTurnBar();
 
 	ctx.textAlign = 'left';
-  ctx.fillStyle="white";
   //ctx.fillRect(gameWidth + 50 ,350,50,50);
   ctx.font="30pt Monospace";
   ctx.fillStyle="#000";

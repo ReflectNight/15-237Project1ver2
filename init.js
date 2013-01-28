@@ -10,6 +10,8 @@ function init(){
 	player.dir = 0;
 	
 	player.item = null;
+	player.str = 0;
+	player.int = 0;
 	
 	moveUp = false;
 	moveDown = false;
