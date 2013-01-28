@@ -2,6 +2,7 @@
 
 function drawStartPage(){
 	//background
+	/*
 	ctx.fillStyle = "rgb(255, 255, 255)";
 	ctx.fillRect(0, 0, canvasWidth, canvasHeight);
 	
@@ -22,9 +23,17 @@ function drawStartPage(){
 	ctx.fillText("Instructions", canvasCenter, 250);
 	ctx.fillText("Start", canvasCenter, 330);
 	ctx.fillText("Credit", canvasCenter, 410);
+	*/
+	
+	var startBackground = new Image();
+	startBackground.src = "Images/Other/title.png";
+	startBackground.onload = 
+		function(){ctx.drawImage(startBackground, 0, 0);}
+	
 }; //end of drawStartPage
 			
 function drawInstructions(){
+	/*
 	//background
 	ctx.fillStyle = "rgb(250,240,245)";
 	ctx.fillRect(0, 0, canvasWidth, canvasHeight);
@@ -47,6 +56,12 @@ function drawInstructions(){
 	ctx.fillText("Good luck and have fun!", canvasCenter, 340);
 	ctx.font = '12pt Helvetica';
 	ctx.fillText("< Back",canvasCenter,470);
+	*/
+	
+	var instrBackground = new Image();
+	instrBackground.src = "Images/Other/instructions.png";
+	instrBackground.onload = 
+		function(){ctx.drawImage(instrBackground, 0, 0);}
 }
 			
 function drawCredit(){
@@ -103,7 +118,15 @@ function mouseEvent(event) {
 			};
 		};
 	}//end startpage controls
-	else if (instPage === true || creditPage===true){
+	else if (instPage === true){
+		if( (x>=550 && x<=(600))&& ((y>=0) && (y<=50))){
+			startPage=true;
+			creditPage=false;
+			instPage=false;
+			drawStartPage();
+		};
+	}
+	else if (creditPage===true){
 		if( (x>=270 && x<=(270+65))&& (y>=(450) && y<=(450+sqh))){
 			startPage=true;
 			creditPage=false;

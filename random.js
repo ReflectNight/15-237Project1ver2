@@ -99,19 +99,47 @@
 
 /***************************NPCS****************************/
 
-	NPC[0].name = "SampleNPC";
-	NPC[0].img.src = "Images/NPCs/sampleNPC.png";
+	NPC[0].name = "Angela";
+	NPC[0].img.src = "Images/NPCs/angela.png";
 	NPC[0].freeDialogue = ["I am a sample NPC.", "This is sample dialogue."];
 	NPC[0].freeIndex = 0;
 	NPC[0].rejectDialogue = "Not my item.";
 	NPC[0].acceptDialogue = "Thank you for the item!";
-	NPC[0].hintDialogue = ["This is a hint.", "This is also a hint."];
+	NPC[0].hintDialogue = ["WASD or arrow keys to move."];
 	NPC[0].hintIndex = 0;
-	NPC[0].itemID = 3; //chicken
+	NPC[0].itemID = -1;
 	NPC[0].world = 0;
-	NPC[0].x = 0;
-	NPC[0].y = 5;
-	NPC[0].done=false; // initialized as false if they want an item.
+	NPC[0].x = 7;
+	NPC[0].y = 0;
+	NPC[0].done=false;
+	
+	NPC[1].name = "Sarah";
+	NPC[1].img.src = "Images/NPCs/sarah.png";
+	NPC[1].freeDialogue = ["I am a sample NPC.", "This is sample dialogue."];
+	NPC[1].freeIndex = 0;
+	NPC[1].rejectDialogue = "Not my item.";
+	NPC[1].acceptDialogue = "Thank you for the item!";
+	NPC[1].hintDialogue = ["Press T to teleport!"];
+	NPC[1].hintIndex = 0;
+	NPC[1].itemID = -1;
+	NPC[1].world = 0;
+	NPC[1].x = 8;
+	NPC[1].y = 0;
+	NPC[1].done=false;
+	
+	NPC[2].name = "SampleNPC";
+	NPC[2].img.src = "Images/NPCs/sampleNPC.png";
+	NPC[2].freeDialogue = ["I am a sample NPC.", "This is sample dialogue."];
+	NPC[2].freeIndex = 0;
+	NPC[2].rejectDialogue = "Not my item.";
+	NPC[2].acceptDialogue = "Thank you for the item!";
+	NPC[2].hintDialogue = ["This is a hint.", "This is also a hint."];
+	NPC[2].hintIndex = 0;
+	NPC[2].itemID = 3; //chicken
+	NPC[2].world = 0;
+	NPC[2].x = 0;
+	NPC[2].y = 5;
+	NPC[2].done=false; // initialized as false if they want an item.
 
 /***************************OTHER****************************/	
 	/** PUT ITEMS AND NPCS INTO GRID **/

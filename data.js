@@ -52,7 +52,7 @@
 // NPCs.js Variables
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-	var numNPCs = 1;
+	var numNPCs = 3;
 	var NPC = new Array(numNPCs);
 	var numFree = 2;
 	var numHint = 2;
@@ -117,10 +117,10 @@
 		
 		// 7 x 9 grid of 50x50 pixel squares.
 		// Indexed worldMap[i].grid[row][col].
-		worldMap[i].grid = new Array(7);
+		worldMap[i].grid = new Array(9);
 		for (var j = 0; j < worldMap[i].grid.length; j++)
 		{
-			worldMap[i].grid[j] = new Array(9);
+			worldMap[i].grid[j] = new Array(7);
 		}
 	}
 
