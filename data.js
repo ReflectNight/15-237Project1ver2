@@ -29,6 +29,11 @@
 	var sqh = 30;
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// endscene.js Variables
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	var complete = false;
+	
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // items.js Variables
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -240,7 +245,18 @@ var state = 1;
 // currentWorld: denotes the world the player is in.
 var currentWorld = 0;
 
-var inventory = {x:500, y:200}//location of the inventory
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// sidebar.js Variables
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+var statsBar = new Image();
+statsBar.src = "Images/Worlds/stats.png";
+
+var itemBar = new Image();
+itemBar.src = "Images/Worlds/item.png";
+
+var turnBar = new Image();
+turnBar.src = "Images/Worlds/turns.png";
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // game.js Variables
@@ -248,3 +264,6 @@ var inventory = {x:500, y:200}//location of the inventory
 
 var intervalID;
 var timerDelay = 50;
+
+// 0: menu, 1: game, 2: endscene
+var screen = 0;

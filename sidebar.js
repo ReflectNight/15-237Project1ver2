@@ -2,34 +2,47 @@
  * For all sidebar items
  */
 
-function drawSidebar(){
-var statsBar = new Image();
-	statsBar.src = "Images/Worlds/stats.png";
+function drawStatsBar(){
 	ctx.drawImage(statsBar, gameWidth, 0);
-	
-	var itemBar = new Image();
-	itemBar.src = "Images/Worlds/item.png";
+}
+ 
+function drawItemBar(){
 	ctx.drawImage(itemBar, gameWidth, 150);
+}
 
-	var turnBar = new Image();
-	turnBar.src = "Images/Worlds/turns.png";
+function drawTurnBar(){
 	ctx.drawImage(turnBar, gameWidth, 300);
 }
 
 function updateStats(){
+	drawStatsBar();
   //to be completed
   //this is you
   //happyface
 }
 
 function updateItem(){
-  
+  drawItemBar();
+	
+	ctx.fillStyle = "white";
+	ctx.fillRect(gameWidth + 50, 200, 50, 50);
+	if (player.item !== null)
+		ctx.drawImage(player.item.img, gameWidth+50, 200);
 }
 
 function updateMoves(){
-  ctx.fillStyle="rgb(200,40,50)";
-  ctx.fillRect(gameWidth,300,size,size);
+	drawTurnBar();
+
+	ctx.textAlign = 'left';
+  ctx.fillStyle="white";
+  //ctx.fillRect(gameWidth + 50 ,350,50,50);
   ctx.font="30pt Monospace";
   ctx.fillStyle="#000";
-  ctx.fillText(numTurns,500,350);
+  ctx.fillText(numTurns,500,388);
+}
+
+function drawSidebar(){
+	updateStats();
+	updateItem();
+	updateMoves();
 }

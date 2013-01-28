@@ -1,11 +1,5 @@
 // menu.js
 
-
-/** Reformatted so we can call menu again later when game ends. **/
-/** I made a data.js that'll initialize everything, so you can
-		put whatever text you want for instructions/credits/whatever there
-		I dunno go nuts with it gurl **/
-
 function drawStartPage(){
 	//background
 	ctx.fillStyle = "rgb(255, 255, 255)";
@@ -79,8 +73,8 @@ function drawCredit(){
 	ctx.font = '12pt Helvetica';
 	ctx.fillText("< Back",canvasCenter,470);
 }
-						
-canvas.addEventListener('mousedown', function(event) {
+
+function mouseEvent(event) {
 	
 	var x = event.pageX-canvas.offsetLeft//because canvas is relative, have to subtract
 	var y = event.pageY-canvas.offsetTop;
@@ -98,6 +92,7 @@ canvas.addEventListener('mousedown', function(event) {
 				//console.log("Start");
 				startPage=false;
 				gameMode=true;
+				screen = 1;
 				run();
 			}
 			else if( y>=(385) && y <=(385+sqh)){
@@ -116,7 +111,5 @@ canvas.addEventListener('mousedown', function(event) {
 			drawStartPage();
 		};
 	}//end instPage,creditPage controls
-	else{ // all other mouseclick controls: ie in game mode
-		//console.log("no longer in startpage");
-	};
-});//end mousedown event listener
+}
+canvas.addEventListener('mousedown', mouseEvent);//end mousedown event listener

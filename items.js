@@ -3,7 +3,8 @@
 */
 
 function itemAction(obj){
-	
+	numTurns--;
+	updateMoves();
 	if(player.item === null)
 		pickUp(obj);
 	else{
@@ -12,12 +13,14 @@ function itemAction(obj){
 }
 
 function pickUp(item){
-  player.item = item;
+	player.item = item;
 	item.onScreen = false;
 	worldMap[currentWorld].grid[player.item.x][player.item.y] = undefined;
 	
 	drawDialogue();
 	printDialogue("You have picked up "+item.name+"!");
+	
+	updateItem();
 }
 
 function switchItem(newItem){
@@ -32,4 +35,5 @@ function switchItem(newItem){
 	printDialogue("You dropped "+player.item.name+" and picked up "+newItem.name+"!");
 	
 	player.item = newItem;
+	updateItem();
 }

@@ -51,17 +51,27 @@ function drawObjBelow(playerLoc){
 
 // onTimer(): Handles the event when page is refreshed. 
 function onTimer(){
-	var pos = getPlayerPos();
-	
-	drawBG();
-	drawObjAbove(pos.y);
-	drawPlayer();
-	drawObjBelow(pos.y);
-	drawTeleportMenu();
+	if(screen === 1){
+		var pos = getPlayerPos();
+		
+		drawBG();
+		drawObjAbove(pos.y);
+		drawPlayer();
+		drawObjBelow(pos.y);
+		drawTeleportMenu();
+		
+		if (numTurns <= 0 || complete)
+			screen = 2;
+	}
+	else if(screen === 2){
+		clearInterval(intervalID);
+		drawEndPage();
+	}
 }
 
 // run(): Executes the game.
 function run(){
+	init();
 	console.log("Game start.");
 	
 	ctx.fillStyle = "#000";

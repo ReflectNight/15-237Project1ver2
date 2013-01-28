@@ -1,15 +1,25 @@
 /* NPCs.js
  * 		Contains NPC-related functions.
 */
-function npcAction(npc, item){
 
+function isComplete(){
+	for(var i = 0; i < NPC.length; i++){
+		if (!NPC[i])
+			return;
+	}
+			
+	complete = true;
+}
+
+function npcAction(npc, item){
 	if(npc.done !== true){
 		if(item === null)
 			talk(npc);
 		else{
 			hasItem(npc, item);
-		};
+		}
 		numTurns--;
+		updateMoves();
 	}
 	else{
 		printDialogue(npc.name+": "+npc.freeDialogue[0]);
@@ -28,6 +38,7 @@ function hasItem(npc,item){
 	
 		printDialogue(npc.name+": "+npc.acceptDialogue);
 		npc.done=true;
+		isComplete();
 	}
 	else
 		printDialogue(npc.name+": "+npc.rejectDialogue);

@@ -1,8 +1,6 @@
 ERRORS:
--there is no sidebar
 -add instructions for teleportation
 -add welcome text
--make multiline text work
--make user interaction/what they want work (using description)
+-make multiline text work (use a loop)
 -make numTurns work so you actually run out of turns
 -endgame screen

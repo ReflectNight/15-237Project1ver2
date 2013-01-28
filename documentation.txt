@@ -80,6 +80,13 @@ data.js:
 	currentWorld
 	inventory
 	
+	statsBar
+		statsBar.src
+	itemBar
+		itemBar.src
+	turnBar
+		turnBar.src
+	
 	intervalID
 	timerDelay
 

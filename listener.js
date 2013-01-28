@@ -15,7 +15,13 @@ function updateDown(keyCode, x){
 	switch (keyCode){
 	//performing an action
 		case 32: // spacebar
-			if (state === 1){
+			if (screen === 2){
+				startPage=true;
+				creditPage=false;
+				instPage=false;
+				drawStartPage();
+			}
+			else if (state === 1){
 				doAction();
 			}
 			break;
