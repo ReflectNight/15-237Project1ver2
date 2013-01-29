@@ -15,11 +15,17 @@ function updateDown(keyCode, x){
 	switch (keyCode){
 	//performing an action
 		case 32: // spacebar
-			if (screen === 2){
+			if (screen === 4){
 				startPage=true;
 				creditPage=false;
 				instPage=false;
 				drawStartPage();
+			}
+			if (screen === 3){
+				drawEndPage();
+			}
+			else if (screen === 2){
+				drawGameEnd();
 			}
 			else if (state === 1){
 				doAction();
