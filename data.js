@@ -37,7 +37,7 @@
 // items.js Variables
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-	var numItems = 10;
+	var numItems = 11;
 	var item = new Array(numItems);
 	for (var i = 0; i < numItems; i++)
 	{
@@ -52,7 +52,7 @@
 // NPCs.js Variables
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-	var numNPCs = 3;
+	var numNPCs = 5;
 	var NPC = new Array(numNPCs);
 	var numFree = 2;
 	var numHint = 2;
@@ -125,8 +125,8 @@
 	}
 
 	worldMap[0].img.src = "Images/Worlds/rm1.png";
-	worldMap[1].img.src = "Images/Worlds/beach.png";
-	worldMap[2].img.src = "Images/Worlds/grass.png";
+	worldMap[1].img.src = "Images/Worlds/grass.png";
+	worldMap[2].img.src = "Images/Worlds/beach.png";
 
 	// World
 	// state: 0 denotes player is in menu screen, 1 denotes player is in a world.

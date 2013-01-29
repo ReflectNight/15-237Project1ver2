@@ -17,9 +17,38 @@ function getEndStats(){
 		achievements.push("We're your only friends. That's sad.");
 	else achievements.push("You have " + numFriends + " friends! Good for you.");
 	
+	//achievements.push("You have "+ player.int + " int and " + player.str + " str.");
+	
 	//int
+	if (player.int === 0){
+		achievements.push("0 int? I guess we can't measure your intelligence, scale won't "); 
+		achievements.push("go that low.");
+	}
+	else if (player.int === 3)
+		achievements.push("You have 3 int! Aren't you the most special snowflake.");
+	
 	//str
+	if (player.str === 0)
+		achievements.push("0 str... do you even lift bro?");
+	else if (player.str === 3)
+		achievements.push("3 str! You work out!");
+	
 	//kosbie
+	if (NPC[4].done){
+		achievements.push("You're friends with Professor Kosbie!");
+		achievements.push("Maybe you'll get a few extra points on the next quiz.");
+	}
+	
+	//angela
+	if (NPC[0].gotRing){
+		achievements.push("YOU GAVE THE ONE RING TO ANGELA MYERRRR HERR HERR");
+	}
+	
+	//sarah
+	if (NPC[1].gotElephant){
+		achievements.push("You gave Sarah an elephant. Sarah is confused! ")
+		achievements.push("She hurt herself in her confusion.");
+	}
 	
 	return achievements;
 }
@@ -59,11 +88,11 @@ function drawEndPage(){
 	var achievements = getEndStats();
 	
 	ctx.fillStyle = "black";
-	ctx.font = 'bold 20pt Arial';
+	ctx.font = 'bold 11pt Arial';
 	ctx.textAlign = "left";
 	for(var i = 0; i < achievements.length; i++){
 		ctx.fillText("HI", 0, 0);
-		ctx.fillText(achievements[i], 50, i*25 + 100);
+		ctx.fillText(achievements[i], 70, i*25 + 100);
 		console.log(achievements[i]);
 	}
 

@@ -37,8 +37,8 @@
 	item[3].description2 = "I want a feathery friend";
 	item[3].img.src = "Images/Items/chicken.png";
 	item[3].world = 1;
-	item[3].x = 4;
-	item[3].y = 4;
+	item[3].x = 7;
+	item[3].y = 6;
 	item[3].str = 1;
 	
 	item[4].name = "The One Ring";
@@ -56,7 +56,7 @@
 		"the earth.";
 	item[5].img.src = "Images/Items/pickaxe.png";
 	item[5].world = 1;
-	item[5].x = 2;
+	item[5].x = 6;
 	item[5].y = 4;
 	item[5].str = 2;
 	
@@ -84,7 +84,7 @@
 	item[8].description2 = "Red is my favorite colour and I quite like ghosts.";
 	item[8].img.src = "Images/Items/PMGhost.png";
 	item[8].world = 2;
-	item[8].x = 4;
+	item[8].x = 5;
 	item[8].y = 1;
 	item[8].str = 0;
 	
@@ -93,9 +93,18 @@
 	item[9].description2 = "Edible fungi are awesome!";
 	item[9].img.src = "Images/Items/greenmushroom.png";
 	item[9].world = 2;
-	item[9].x = 4;
+	item[9].x = 8;
 	item[9].y = 3;
 	item[9].str = 0;
+	
+	item[10].name = "Gold Star";
+	item[10].description1 = "you Tried";
+	item[10].description2 = "yOu tRieD";
+	item[10].img.src = "Images/Items/youtried.png";
+	item[10].world = 2;
+	item[10].x = 4;
+	item[10].y = 6;
+	item[10].str = 0;
 
 /***************************NPCS****************************/
 
@@ -107,39 +116,77 @@
 	NPC[0].acceptDialogue = "NOW I CAN RULE THE WORLD. (huehuehue);I mean... Thanks";
 	NPC[0].hintDialogue = ["WASD or arrow keys to move and SPACE ;to interact with item and people!;Try to help everyone you meet along the way!", "I want something else"];
 	NPC[0].hintIndex = 0;
-	NPC[0].itemID = -1;
+	NPC[0].itemID = 4;
 	NPC[0].world = 0;
 	NPC[0].x = 7;
 	NPC[0].y = 0;
+	NPC[0].int = 0;
 	NPC[0].done=true;
+	NPC[0].gotRing = false;
 	
 	NPC[1].name = "Sarah";
 	NPC[1].img.src = "Images/NPCs/sarah.png";
-	NPC[1].freeDialogue = ["Press T to teleport to different worlds!;Use 1, 2, 3 and 0 to pick a destination"];
+	NPC[1].freeDialogue = ["Press T to teleport to different worlds!;Press 0, 1, 2, or 3 to pick a destination."];
 	NPC[1].freeIndex = 0;
-	NPC[1].rejectDialogue = "Not my item.";
-	NPC[1].acceptDialogue = "Thank you for the item!";
-	NPC[1].hintDialogue = ["Press T to teleport to different worlds!;Use 1, 2, 3 and 0 to pick a destination"];
+	NPC[1].rejectDialogue = "Uh, thanks but no thanks.";
+	NPC[1].acceptDialogue = ".......Did Angela tell you to get me this?? ;I don't really want it, but fine...";
+	NPC[1].hintDialogue = ["Press T to teleport to different worlds!;Press 0, 1, 2, or 3 to pick a destination."];
 	NPC[1].hintIndex = 0;
-	NPC[1].itemID = -1;
+	NPC[1].itemID = 6;
 	NPC[1].world = 0;
 	NPC[1].x = 8;
 	NPC[1].y = 0;
+	NPC[1].int = 0;
 	NPC[1].done=true;
+	NPC[0].gotElephant = false;
 	
-	NPC[2].name = "SampleNPC";
+	NPC[2].name = "Peasant Lady";
 	NPC[2].img.src = "Images/NPCs/sampleNPC.png";
-	NPC[2].freeDialogue = ["I am a sample NPC.", "This is sample dialogue."];
+	NPC[2].freeDialogue = ["This game was originally supposed to be a dating sim. "];
 	NPC[2].freeIndex = 0;
-	NPC[2].rejectDialogue = "That is not my item.";
-	NPC[2].acceptDialogue = "Thank you for the item!";
-	NPC[2].hintDialogue = ["This is a hint.", "This is also a hint."];
+	NPC[2].rejectDialogue = "That's not what I wanted...";
+	NPC[2].acceptDialogue = "Thank you for the chicken!!";
+	NPC[2].hintDialogue = ["I could really use some eggs...", "I love birds!"];
 	NPC[2].hintIndex = 0;
 	NPC[2].itemID = 3; //chicken
 	NPC[2].world = 0;
 	NPC[2].x = 0;
 	NPC[2].y = 5;
-	NPC[2].done=false; // initialized as false if they want an item.
+	NPC[2].int = 0;
+	NPC[2].done=false;
+	
+	NPC[3].name = "Green-Haired Lady";
+	NPC[3].img.src = "Images/NPCs/ladyNPC.png";
+	NPC[3].freeDialogue = ["Aren't you sweet?", "I wish Sherlock season 3 came out already."];
+	NPC[3].freeIndex = 0;
+	NPC[3].rejectDialogue = "That is not what I was looking for.";
+	NPC[3].acceptDialogue = "Oh! Thank you for finding him!";
+	NPC[3].intDialogue = "I don't talk to mere commonfolk.";
+	NPC[3].hintDialogue = ["Have you seen my little pet?", "I miss my old red friend."];
+	NPC[3].hintIndex = 0;
+	NPC[3].itemID = 8;
+	NPC[3].world = 1;
+	NPC[3].x = 0;
+	NPC[3].y = 5;
+	NPC[3].int = 1;
+	NPC[3].done=false;
+	
+	NPC[4].name = "Kosbie";
+	NPC[4].img.src = "Images/NPCs/kosbie.png";
+	NPC[4].freeDialogue = ["This game is great, A+.", "I am the best professor."];
+	NPC[4].freeIndex = 0;
+	NPC[4].rejectDialogue = "Thanks! I don't want it.";
+	NPC[4].acceptDialogue = "This is the happiest day of my life.";
+	NPC[4].intDialogue = "We move fast in this class, so you should study more!!!";
+	NPC[4].hintDialogue = ["So if you call this function... oh wait, that's wrong.", 
+		"I only slept for an hour last night."];
+	NPC[4].hintIndex = 0;
+	NPC[4].itemID = 10;
+	NPC[4].world = 2;
+	NPC[4].x = 7;
+	NPC[4].y = 1;
+	NPC[4].int = 3;
+	NPC[4].done=false;
 
 /***************************OTHER****************************/	
 	/** PUT ITEMS AND NPCS INTO GRID **/

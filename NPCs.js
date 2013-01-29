@@ -14,8 +14,33 @@ function isComplete(){
 }
 
 function npcAction(npc, item){
-	if(!npc.done){
+	if (npc.name === "Angela"){
 		if(item === null){
+			talk(npc);
+		}
+		else if (item.ID === npc.itemID){
+			player.item = null;
+			updateItem();
+			printDialogue(npc.name+": "+npc.acceptDialogue);
+			npc.gotRing = true;
+		}
+	}
+	else if (npc.name === "Sarah"){
+		if(item === null){
+			talk(npc);
+		}
+		else if (item.ID === npc.itemID){
+			player.item = null;
+			updateItem();
+			printDialogue(npc.name+": "+npc.acceptDialogue);
+			npc.gotElephant = true;
+		}
+	}
+	else if(!npc.done){
+		if (npc.int > player.int){
+			printDialogue(npc.name+": "+npc.intDialogue);
+		}
+		else if(item === null){
 			talk(npc);
 		}
 		else{
@@ -43,7 +68,6 @@ function hasItem(npc,item){
 		printDialogue(npc.name+": "+npc.acceptDialogue);
 		npc.done=true;
 		isComplete();
-		console.log("complete: " + complete);
 	}
 	else
 		printDialogue(npc.name+": "+npc.rejectDialogue + ";" + npc.hintDialogue[1]);

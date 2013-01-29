@@ -2,6 +2,9 @@
 function init(){
 	complete = false;
 
+	NPC[0].gotRing = false;
+	NPC[1].gotElephant = false;
+	
 	for(var i = 2; i < NPC.length; i++)
 		NPC[i].done=false;
 		
