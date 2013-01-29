@@ -16,5 +16,10 @@ function drawTeleportMenu(){
 function goToWorld(label){
 	currentWorld = label;
 	console.log("Went to world " + currentWorld);
-	printDialogue("You arrived at world"  + currentWorld);
+	if(currentWorld ===0)
+		printDialogue("You arrived at home");
+	if(currentWorld ===1)
+		printDialogue("You arrived at the forest clearing");
+	if(currentWorld ===2)
+		printDialogue("You arrived at the beach");
 }
