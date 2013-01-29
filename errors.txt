@@ -1,5 +1,12 @@
 ERRORS:
--add instructions for teleportation
--add welcome text
--make multiline text work (use a loop)
--endgame screen
+- endgame screen?
+- endgame ability - completion by NPC.done
+- ability to put a ring on it (angela)
+- sync instructions for teleportation
+- add third screen
+- more npcs (ones that wont talk to you)
+- make work int a usable feature
+- rejection hotline
+
+Extra Features??
+
