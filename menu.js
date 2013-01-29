@@ -125,7 +125,7 @@ function mouseEvent(event) {
 			};
 		};
 	}//end startpage controls
-	else if (instPage || creditPage){
+	else if (instPage || creditPage || screen === 4){
 		if( (x>=550 && x<=(600))&& ((y>=0) && (y<=50))){
 			startPage=true;
 			creditPage=false;
