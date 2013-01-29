@@ -16,4 +16,5 @@ function drawTeleportMenu(){
 function goToWorld(label){
 	currentWorld = label;
 	console.log("Went to world " + currentWorld);
+	printDialogue("You arrived at world"  + currentWorld);
 }

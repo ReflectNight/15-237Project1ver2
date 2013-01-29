@@ -68,7 +68,7 @@ function switchItem(newItem){
 	player.item.x=newItem.x;
 	player.item.y=newItem.y;
 	
-	printDialogue("You dropped "+player.item.name+" and picked up "+newItem.name+"!");
+	printDialogue("You dropped "+player.item.name+"; and picked up "+newItem.name+"!");
 	
 	player.item = newItem;
 	updateItem();

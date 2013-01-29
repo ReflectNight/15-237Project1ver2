@@ -81,7 +81,7 @@
 	
 	item[8].name = "PMGhost";
 	item[8].description1 = "I'm nostalgic about Pacman. Blinky is awesome.";
-	item[8].description2 = "Red is my favorite colour!";
+	item[8].description2 = "Red is my favorite colour and I quite like ghosts.";
 	item[8].img.src = "Images/Items/PMGhost.png";
 	item[8].world = 2;
 	item[8].x = 4;
@@ -103,9 +103,9 @@
 	NPC[0].img.src = "Images/NPCs/angela.png";
 	NPC[0].freeDialogue = ["I am a sample NPC.", "This is sample dialogue."];
 	NPC[0].freeIndex = 0;
-	NPC[0].rejectDialogue = "Not my item.";
-	NPC[0].acceptDialogue = "Thank you for the item!";
-	NPC[0].hintDialogue = ["WASD or arrow keys to move."];
+	NPC[0].rejectDialogue = "I don't want that :(";
+	NPC[0].acceptDialogue = "NOW I CAN RULE THE WORLD. (huehuehue); I mean... Thanks";
+	NPC[0].hintDialogue = ["WASD or arrow keys to move and SPACE ; to interact with item and people!; Try to help everyone you meet along the way!", "I want something else"];
 	NPC[0].hintIndex = 0;
 	NPC[0].itemID = -1;
 	NPC[0].world = 0;
@@ -119,7 +119,7 @@
 	NPC[1].freeIndex = 0;
 	NPC[1].rejectDialogue = "Not my item.";
 	NPC[1].acceptDialogue = "Thank you for the item!";
-	NPC[1].hintDialogue = ["Press T to teleport!"];
+	NPC[1].hintDialogue = ["Press T to teleport to different worlds!; Use 1, 2, 3 and 0 to pick a destination"];
 	NPC[1].hintIndex = 0;
 	NPC[1].itemID = -1;
 	NPC[1].world = 0;

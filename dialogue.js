@@ -27,5 +27,4 @@ function printDialogue(txt){
 	for( var i=0; i<multiline.length; i++{
 		ctx.fillText(txt,30,line+(i*30)); */
 		
-  //press space to continue
 }
