@@ -23,5 +23,5 @@ function goToWorld(label){
 	if(currentWorld ===2)
 		printDialogue("You arrived at the beach");
 	if(currentWorld ===3)
-		printDialogue("You arrived on the streetz...;It's suspicous");
+		printDialogue("You arrived on the streetz...;It's suspicious ");
 }

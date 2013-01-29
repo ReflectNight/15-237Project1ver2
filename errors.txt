@@ -1,8 +1,1 @@
 ERRORS:
-- endgame screen?
-- sync instructions for teleportation
-- add third screen
-- rejection hotline (wat)
-
-Extra Features??
-

@@ -5,7 +5,7 @@
 	item[0].name = "Book";
 	item[0].description1 = "You have made a startling discovery! ;" + 
 		"Your int increased by 1 pt.";
-	item[0].description2 = "Your int is at the max!";
+	item[0].description2 = "Your INT is maxed out!";
 	item[0].img.src = "Images/Items/book.png";
 	item[0].world = 0;
 	item[0].x = 0;
@@ -14,7 +14,7 @@
 	
 	item[1].name = "Weight";
 	item[1].description1 = "Phew, good workout, your str increased by 1 pt!";
-	item[1].description2 = "Your str is at the max!";
+	item[1].description2 = "If you work out anymore you're going to pull something";
 	item[1].img.src = "Images/Items/weight.png";
 	item[1].world = 0;
 	item[1].x = 1;
@@ -109,17 +109,16 @@
 
 	NPC[0].name = "Angela";
 	NPC[0].img.src = "Images/NPCs/angela.png";
-	NPC[0].freeDialogue = ["WASD or arrow keys to move and SPACE to ;interact with item and people!", 
+	NPC[0].freeDialogue = ["WASD or arrow keys to move and SPACE to ;interact with items and people!", 
 		"Try to help everyone you meet along the way!",
 		"Can't pick up an item? Try working out.",
-		"pst... I think Sarah wants an elephant ;)",
-		"Kosbie deserves a prize for being a great professor :)", 
+		"pst... I think Sarah wants an elephant ;)", 
 		"MY PRECIOUSSSSSSSS"];
 	NPC[0].freeIndex = 0;
 	NPC[0].rejectDialogue = "I don't want that :(";
 	NPC[0].acceptDialogue = "NOW I CAN RULE THE WORLD. (huehuehue);I mean... Thanks";
-	NPC[0].hintDialogue = ["WASD or arrow keys to move and SPACE ;to interact with item and people!;" +
-		"Try to help everyone you meet along the way!", "I want something else.",];
+	NPC[0].hintDialogue = ["WASD or arrow keys to move and SPACE ;to interact with items and people!;" +
+		"If you can't pick something up, try lifting", "I want something else.",];
 	NPC[0].itemID = 4;
 	NPC[0].world = 0;
 	NPC[0].x = 7;
@@ -137,7 +136,8 @@
 	NPC[1].freeIndex = 0;
 	NPC[1].rejectDialogue = "Uh, thanks but no thanks.";
 	NPC[1].acceptDialogue = ".......Did Angela tell you to get me this?? ;I don't really want it, but fine...";
-	NPC[1].hintDialogue = ["Press T to teleport to different worlds!;Press 0, 1, 2, or 3 to pick a destination."];
+	NPC[1].hintDialogue = ["Press T to teleport to different worlds!;Press 0, 1, 2, or 3 to pick a destination."+
+		";If someone won't talk to you, try reading.","why are you giving this to me?"];
 	NPC[1].itemID = 6;//elephant
 	NPC[1].world = 0;
 	NPC[1].x = 8;
@@ -156,7 +156,7 @@
 	NPC[2].acceptDialogue = "Thank you for the chicken!!";
 	NPC[2].hintDialogue = ["I could really use some eggs...", "I love birds!"];
 	NPC[2].itemID = 3; //chicken
-	NPC[2].world = 0;
+	NPC[2].world = 2;
 	NPC[2].x = 0;
 	NPC[2].y = 5;
 	NPC[2].int = 0;
@@ -168,7 +168,7 @@
 	NPC[3].freeIndex = 0;
 	NPC[3].rejectDialogue = "That is not what I was looking for.";
 	NPC[3].acceptDialogue = "Oh! Thank you for finding him!";
-	NPC[3].intDialogue = "I don't talk to mere commonfolk... get smarter";
+	NPC[3].intDialogue = "I don't talk to mere commonfolk...";
 	NPC[3].hintDialogue = ["Have you seen my little cook?", "I miss my old flaming friend."];
 	NPC[3].itemID = 7;//Calcifer
 	NPC[3].world = 1;
@@ -211,7 +211,7 @@
 	NPC[5].int = 0;
 	NPC[5].done=false;
 	
-	NPC[6].name = "Peach";
+	NPC[6].name = "Suspicious Man";
 	NPC[6].img.src = "Images/NPCs/someguy.png";
 	NPC[6].freeDialogue = ["awww yissssss", "I think the peasant girl wants the chicken",
 		"Center of the earth, here I come!"];
