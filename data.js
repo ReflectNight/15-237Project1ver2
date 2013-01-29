@@ -19,13 +19,13 @@
 	// dialogue box.
 
 
-	var startPage = true; // wow i forgot how to code things. what even is
+	var startPage = true;
 	var instPage = false;
 	var creditPage = false;
 	var gameMode = false;
 	
-	var sqx = 210;//this is shitty maybe I'll just hardcode it :|
-	var sqw = 180;//unless i figure out an algorithm
+	var sqx = 210;//menu xy variables for clicking
+	var sqw = 180;
 	var sqh = 30;
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -52,7 +52,7 @@
 // NPCs.js Variables
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-	var numNPCs = 5;
+	var numNPCs = 7;
 	var NPC = new Array(numNPCs);
 	var numFree = 2;
 	var numHint = 2;
@@ -124,7 +124,7 @@
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 	// Initialization of Worlds Data
-	var numWorlds = 3;
+	var numWorlds = 4;
 
 	var worldMap = new Array(numWorlds);
 	for (var i = 0; i < numWorlds; i++)
@@ -145,6 +145,7 @@
 	worldMap[0].img.src = "Images/Worlds/rm1.png";
 	worldMap[1].img.src = "Images/Worlds/grass.png";
 	worldMap[2].img.src = "Images/Worlds/beach.png";
+	worldMap[3].img.src = "Images/Worlds/streets.png";
 
 	// World
 	// state: 0 denotes player is in menu screen, 1 denotes player is in a world.

@@ -70,7 +70,7 @@ function switchItem(newItem){
 	player.item.y=newItem.y;
 	
 	printDialogue("You dropped "+player.item.name+"; and picked up "+newItem.name+"!"
-		 + ";\"" + item.description1 + "\"");
+		 + ";\"" + newItem.description1 + "\"");
 	
 	player.item = newItem;
 	updateItem();

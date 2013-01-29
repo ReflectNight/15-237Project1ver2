@@ -77,7 +77,7 @@ function run(){
 	ctx.fillRect(0, 0, canvasWidth, canvasHeight);
 	
 	drawDialogue();
-	printDialogue("Welcome to the Scavenger Hunt!! ; If you have any questions, talk to the NPCs on the top right! ");
+	printDialogue("Welcome to the Scavenger Hunt!! ;If you have any questions, talk to the NPCs on the top right!");
 	drawSidebar();
 	intervalID = setInterval(onTimer, timerDelay);
 }
