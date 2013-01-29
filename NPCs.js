@@ -50,7 +50,8 @@ function npcAction(npc, item){
 		updateMoves();
 	}
 	else{
-		printDialogue(npc.name+": "+npc.freeDialogue[0]);
+		printDialogue(npc.name+": "+npc.freeDialogue[npc.freeIndex]);
+		npc.freeIndex = (npc.freeIndex + 1) % npc.freeDialogue.length;
 	}
 }
 

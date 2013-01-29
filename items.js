@@ -54,7 +54,8 @@ function pickUp(item){
 	worldMap[currentWorld].grid[player.item.x][player.item.y] = undefined;
 	
 	drawDialogue();
-	printDialogue("You have picked up "+item.name+"!");
+	printDialogue("You have picked up "+item.name+"!" +
+		";\"" + item.description1 + "\"");
 	
 	updateItem();
 }
@@ -68,7 +69,8 @@ function switchItem(newItem){
 	player.item.x=newItem.x;
 	player.item.y=newItem.y;
 	
-	printDialogue("You dropped "+player.item.name+"; and picked up "+newItem.name+"!");
+	printDialogue("You dropped "+player.item.name+"; and picked up "+newItem.name+"!"
+		 + ";\"" + item.description1 + "\"");
 	
 	player.item = newItem;
 	updateItem();
