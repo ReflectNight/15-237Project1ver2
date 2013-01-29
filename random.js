@@ -101,31 +101,31 @@
 
 	NPC[0].name = "Angela";
 	NPC[0].img.src = "Images/NPCs/angela.png";
-	NPC[0].freeDialogue = ["I am a sample NPC.", "This is sample dialogue."];
+	NPC[0].freeDialogue = ["WASD or arrow keys to move and SPACE to ;interact with item and people!;Try to help everyone you meet along the way!"];
 	NPC[0].freeIndex = 0;
 	NPC[0].rejectDialogue = "I don't want that :(";
-	NPC[0].acceptDialogue = "NOW I CAN RULE THE WORLD. (huehuehue); I mean... Thanks";
-	NPC[0].hintDialogue = ["WASD or arrow keys to move and SPACE ; to interact with item and people!; Try to help everyone you meet along the way!", "I want something else"];
+	NPC[0].acceptDialogue = "NOW I CAN RULE THE WORLD. (huehuehue);I mean... Thanks";
+	NPC[0].hintDialogue = ["WASD or arrow keys to move and SPACE ;to interact with item and people!;Try to help everyone you meet along the way!", "I want something else"];
 	NPC[0].hintIndex = 0;
 	NPC[0].itemID = -1;
 	NPC[0].world = 0;
 	NPC[0].x = 7;
 	NPC[0].y = 0;
-	NPC[0].done=false;
+	NPC[0].done=true;
 	
 	NPC[1].name = "Sarah";
 	NPC[1].img.src = "Images/NPCs/sarah.png";
-	NPC[1].freeDialogue = ["I am a sample NPC.", "This is sample dialogue."];
+	NPC[1].freeDialogue = ["Press T to teleport to different worlds!;Use 1, 2, 3 and 0 to pick a destination"];
 	NPC[1].freeIndex = 0;
 	NPC[1].rejectDialogue = "Not my item.";
 	NPC[1].acceptDialogue = "Thank you for the item!";
-	NPC[1].hintDialogue = ["Press T to teleport to different worlds!; Use 1, 2, 3 and 0 to pick a destination"];
+	NPC[1].hintDialogue = ["Press T to teleport to different worlds!;Use 1, 2, 3 and 0 to pick a destination"];
 	NPC[1].hintIndex = 0;
 	NPC[1].itemID = -1;
 	NPC[1].world = 0;
 	NPC[1].x = 8;
 	NPC[1].y = 0;
-	NPC[1].done=false;
+	NPC[1].done=true;
 	
 	NPC[2].name = "SampleNPC";
 	NPC[2].img.src = "Images/NPCs/sampleNPC.png";

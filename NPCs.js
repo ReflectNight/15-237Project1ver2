@@ -4,8 +4,9 @@
 
 function isComplete(){
 	for(var i = 0; i < NPC.length; i++){
-		if (!NPC[i])
+		if (!NPC[i].done){
 			return;
+		}
 	}
 			
 	complete = true;
@@ -35,6 +36,7 @@ function hasItem(npc,item){
 	
 	if (item.ID === npc.itemID){
 		player.item = null;
+		updateItem();
 	
 		printDialogue(npc.name+": "+npc.acceptDialogue);
 		npc.done=true;

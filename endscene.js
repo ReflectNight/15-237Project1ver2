@@ -15,7 +15,7 @@ function getEndStats(){
 	
 	if (numFriends === 2)
 		achievements.push("We're your only friends. That's sad.");
-	else achievements.push("You have " + numFriends + "! Good for you.");
+	else achievements.push("You have " + numFriends + " friends! Good for you.");
 	
 	//int
 	//str
