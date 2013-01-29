@@ -32,18 +32,22 @@ function updateDown(keyCode, x){
 	//WASD movement
 		case 38:
 		case 87: //w
+			player.isMoving = true;
 			moveUp = x;
 			break;
 		case 37:
 		case 65: //a
+			player.isMoving = true;
 			moveLeft = x;
 			break;
 		case 40:
 		case 83: //s
+			player.isMoving = true;
 			moveDown = x;
 			break;
 		case 39:
 		case 68: //d
+			player.isMoving = true;
 			moveRight = x;
 			break;
 			
@@ -69,18 +73,22 @@ function updateUp(keyCode, x){
 	//WASD movement
 		case 38:
 		case 87: //w
+			player.isMoving = false;
 			moveUp = x;
 			break;
 		case 37:
 		case 65: //a
+			player.isMoving = false;
 			moveLeft = x;
 			break;
 		case 40:
 		case 83: //s
+			player.isMoving = false;
 			moveDown = x;
 			break;
 		case 39:
 		case 68: //d
+			player.isMoving = false;
 			moveRight = x;
 			break;
 		default:

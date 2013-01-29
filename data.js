@@ -79,17 +79,35 @@
 	player.sprite = new Array(4); // 0: down, 1: left, 2: up, 3: right
 	for(var i = 0; i < 4; i++)
 	{
-		player.sprite[i] = new Array(3);
-		for (var j = 0; j < 3; j++)
+		player.sprite[i] = new Array(4);
+		for (var j = 0; j < 4; j++)
 		{
 			player.sprite[i][j] = new Image();
 		}
 	}
 
-	player.sprite[0][0].src = "Images/Player/sampleplayer.png";
-	player.sprite[1][0].src = "Images/Player/sampleplayerleft.png";
-	player.sprite[2][0].src = "Images/Player/sampleplayerback.png";
-	player.sprite[3][0].src = "Images/Player/sampleplayerright.png";
+	player.sprite[0][0].src = "Images/Player/playerfront1.png";
+	player.sprite[0][1].src = "Images/Player/playerfront2.png";
+	player.sprite[0][2].src = "Images/Player/playerfront3.png";
+	player.sprite[0][3].src = "Images/Player/playerfront4.png";
+	
+	player.sprite[1][0].src = "Images/Player/playerback1.png";
+	player.sprite[1][1].src = "Images/Player/playerback2.png";
+	player.sprite[1][2].src = "Images/Player/playerback3.png";
+	player.sprite[1][3].src = "Images/Player/playerback4.png";
+	
+	player.sprite[2][0].src = "Images/Player/playerlside1.png";
+	player.sprite[2][1].src = "Images/Player/playerlside2.png";
+	player.sprite[2][2].src = "Images/Player/playerlside3.png";
+	player.sprite[2][3].src = "Images/Player/playerlside4.png";
+	
+	player.sprite[3][0].src = "Images/Player/playerrside1.png";
+	player.sprite[3][1].src = "Images/Player/playerrside2.png";
+	player.sprite[3][2].src = "Images/Player/playerrside3.png";
+	player.sprite[3][3].src = "Images/Player/playerrside4.png";
+	
+	player.step = 0;
+	player.isMoving = false;
 	player.item = null;
 
 	player.str = 0;
@@ -152,7 +170,7 @@
 	// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 	var intervalID;
-	var timerDelay = 50;
+	var timerDelay = 150;
 
 	// 0: menu, 1: game, 2: endscene
 	var screen = 0;
