@@ -41,5 +41,5 @@ function hasItem(npc,item){
 		isComplete();
 	}
 	else
-		printDialogue(npc.name+": "+npc.rejectDialogue);
+		printDialogue(npc.name+": "+npc.rejectDialogue + ";" + npc.hintDialogue[1]);
 }

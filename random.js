@@ -131,7 +131,7 @@
 	NPC[2].img.src = "Images/NPCs/sampleNPC.png";
 	NPC[2].freeDialogue = ["I am a sample NPC.", "This is sample dialogue."];
 	NPC[2].freeIndex = 0;
-	NPC[2].rejectDialogue = "Not my item.";
+	NPC[2].rejectDialogue = "That is not my item.";
 	NPC[2].acceptDialogue = "Thank you for the item!";
 	NPC[2].hintDialogue = ["This is a hint.", "This is also a hint."];
 	NPC[2].hintIndex = 0;
