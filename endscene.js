@@ -7,7 +7,7 @@ function getEndStats(){
 	var achievements = [""];
 	
 	//number of friends
-	var numFriends = 2;
+	var numFriends = 0;
 	for(var i = 0; i < NPC.length; i++){
 		if (NPC[i].done)
 			numFriends++;

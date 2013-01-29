@@ -5,6 +5,7 @@
 function isComplete(){
 	for(var i = 0; i < NPC.length; i++){
 		if (!NPC[i].done){
+			console.log("NPC["+i+"].done: " + NPC[i].done);
 			return;
 		}
 	}
@@ -13,9 +14,10 @@ function isComplete(){
 }
 
 function npcAction(npc, item){
-	if(npc.done !== true){
-		if(item === null)
+	if(!npc.done){
+		if(item === null){
 			talk(npc);
+		}
 		else{
 			hasItem(npc, item);
 		}
@@ -41,6 +43,7 @@ function hasItem(npc,item){
 		printDialogue(npc.name+": "+npc.acceptDialogue);
 		npc.done=true;
 		isComplete();
+		console.log("complete: " + complete);
 	}
 	else
 		printDialogue(npc.name+": "+npc.rejectDialogue + ";" + npc.hintDialogue[1]);

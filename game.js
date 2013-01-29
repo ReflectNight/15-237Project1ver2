@@ -60,11 +60,11 @@ function onTimer(){
 		drawObjBelow(pos.y);
 		drawTeleportMenu();
 		
-		if (numTurns <= 0 || complete)
+		if (numTurns <= 0 || complete){
 			screen = 2;
-	}
-	else if(screen === 2){
-		clearInterval(intervalID);
+			clearInterval(intervalID);
+			drawGameEnd();
+		}
 	}
 }
 

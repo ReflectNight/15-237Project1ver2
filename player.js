@@ -9,7 +9,7 @@ function getPlayerPos(){
 	pos.x = Math.floor((player.x + 10) / 50);
 	pos.y = Math.floor((player.y - 80)/ 50);
 	
-	console.log("Player position: (" + pos.x + ", " + pos.y + ")");
+	//console.log("Player position: (" + pos.x + ", " + pos.y + ")");
 	return pos;
 }
 

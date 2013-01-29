@@ -2,7 +2,7 @@
 function init(){
 	complete = false;
 
-	for(var i = 0; i < NPC.length; i++)
+	for(var i = 2; i < NPC.length; i++)
 		NPC[i].done=false;
 		
 	player.x = gameWidth/2 - 25;

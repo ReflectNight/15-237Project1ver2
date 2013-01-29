@@ -24,9 +24,6 @@ function updateDown(keyCode, x){
 			else if (screen === 3){
 				drawEndPage();
 			}
-			else if (screen === 2){
-				drawGameEnd();
-			}
 			else if (state === 1){
 				doAction();
 			}
