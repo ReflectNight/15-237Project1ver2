@@ -65,6 +65,7 @@ function drawInstructions(){
 }
 			
 function drawCredit(){
+	/*
 	//background
 	ctx.fillStyle = "rgb(255,255,224)";
 	ctx.fillRect(0, 0, canvasWidth, canvasHeight);
@@ -87,6 +88,12 @@ function drawCredit(){
 	ctx.fillText("(kthxbye)", canvasCenter, 290);
 	ctx.font = '12pt Helvetica';
 	ctx.fillText("< Back",canvasCenter,470);
+	*/
+	
+	var creditBackground = new Image();
+	creditBackground.src = "Images/Other/credits.png";
+	creditBackground.onload = 
+		function(){ctx.drawImage(creditBackground, 0, 0);}
 }
 
 function mouseEvent(event) {
@@ -118,7 +125,7 @@ function mouseEvent(event) {
 			};
 		};
 	}//end startpage controls
-	else if (instPage === true){
+	else if (instPage || creditPage){
 		if( (x>=550 && x<=(600))&& ((y>=0) && (y<=50))){
 			startPage=true;
 			creditPage=false;
@@ -126,6 +133,7 @@ function mouseEvent(event) {
 			drawStartPage();
 		};
 	}
+	/*
 	else if (creditPage===true){
 		if( (x>=270 && x<=(270+65))&& (y>=(450) && y<=(450+sqh))){
 			startPage=true;
@@ -134,5 +142,6 @@ function mouseEvent(event) {
 			drawStartPage();
 		};
 	}//end instPage,creditPage controls
+	*/
 }
 canvas.addEventListener('mousedown', mouseEvent);//end mousedown event listener
