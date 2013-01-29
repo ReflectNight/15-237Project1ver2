@@ -65,7 +65,6 @@ function onTimer(){
 	}
 	else if(screen === 2){
 		clearInterval(intervalID);
-		drawEndPage();
 	}
 }
 

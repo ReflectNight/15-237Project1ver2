@@ -21,7 +21,7 @@ function updateDown(keyCode, x){
 				instPage=false;
 				drawStartPage();
 			}
-			if (screen === 3){
+			else if (screen === 3){
 				drawEndPage();
 			}
 			else if (screen === 2){
