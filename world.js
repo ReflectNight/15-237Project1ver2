@@ -9,7 +9,7 @@ function drawTeleportMenu(){
 		ctx.font = '25pt Helvetica';
 		ctx.textAlign = "center";
 		ctx.fillStyle = "rgb(0, 0, 0)";
-		ctx.fillText("Teleporting... (Press 0, 1, 2, or 3)", 225, 225);
+		ctx.fillText("Teleporting..(Press 0, 1, 2, or 3)", 225, 225);
 	}
 }
 
