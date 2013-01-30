@@ -17,7 +17,7 @@ function npcAction(npc, item){
 
 	//the instructors have special cases
 	if (npc.name === "Angela"){
-		if (item.ID === npc.itemID){
+		if ((item !== null) && (item.ID === npc.itemID)){
 			player.item = null;
 			updateItem();
 			printDialogue(npc.name+": "+npc.acceptDialogue);
@@ -27,7 +27,7 @@ function npcAction(npc, item){
 			talk(npc);
 	}
 	else if (npc.name === "Sarah"){
-		if (item.ID === npc.itemID){
+		if ((item !== null) && (item.ID === npc.itemID)){
 			player.item = null;
 			updateItem();
 			printDialogue(npc.name+": "+npc.acceptDialogue);
