@@ -71,7 +71,6 @@ function onTimer(){
 // run(): Executes the game.
 function run(){
 	init();
-	console.log("Game start.");
 	
 	ctx.fillStyle = "#000";
 	ctx.fillRect(0, 0, canvasWidth, canvasHeight);

@@ -27,8 +27,6 @@ function updateStats(){
 function updateItem(){
 
 	drawItemBar();
-	//ctx.fillStyle = "rgb(240,220,130)";
-	//ctx.fillRect(gameWidth + 50, 200, 50, 50);
 	if (player.item !== null)
 		ctx.drawImage(player.item.img, gameWidth+50, 200);
 }

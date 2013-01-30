@@ -3,8 +3,7 @@
 */
 
 function updateDown(keyCode, x){
-	console.log("Key Pressed: " + keyCode);
-
+	// Teleporting through worlds 0 - 3
 	if ((48 <= keyCode) && (keyCode < (48 + numWorlds))){
 		if (state === 0){
 				goToWorld(keyCode - 48);
@@ -67,8 +66,6 @@ function updateDown(keyCode, x){
 }
 
 function updateUp(keyCode, x){
-	console.log("Key Released: " + keyCode);
-
 	switch (keyCode){
 	//WASD movement
 		case 38:

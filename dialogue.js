@@ -5,8 +5,6 @@ prints anything that appears in the dialogue box.
 
 //draws the dialogue box
 function drawDialogue(){
-	//ctx.fillStyle = "white";
-	//ctx.fillRect(0,450,600,150);
 	var image = new Image();
 	image.src = "Images/Worlds/dialogue.png";
 	
@@ -22,7 +20,7 @@ function printDialogue(txt){
 		ctx.textAlign = 'left';
 		ctx.font="15pt Helvetica";
 		ctx.fillStyle = "black";
-		//ctx.fillText(txt,30,500);
+		
 		var multiline= txt.split(';');//tokenizer
 		var line = 500;
 		for (var i=0; i<multiline.length; i++){

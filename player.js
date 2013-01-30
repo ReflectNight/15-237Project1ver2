@@ -8,8 +8,6 @@ function getPlayerPos(){
 	var pos = new Object();
 	pos.x = Math.floor((player.x + 10) / 50);
 	pos.y = Math.floor((player.y - 80)/ 50);
-	
-	//console.log("Player position: (" + pos.x + ", " + pos.y + ")");
 	return pos;
 }
 
@@ -82,32 +80,24 @@ function doAction(){
 	var obj2 = worldMap[currentWorld].grid[pos.x][pos.y + 1];
 	
 	if (obj !== undefined){
-		console.log("obj: " + obj);
-		console.log("obj name: " + obj.name);
 	
 		// item action
 		if (obj.type === "item"){
-			console.log("item action.");
 			itemAction(obj);
 		}
 		// NPC action
 		else if (obj.type === "NPC"){
-			console.log("NPC action.");
 			npcAction(obj, player.item);
 		}
 	}
 	else if (obj2 !== undefined){
-		console.log("obj2: " + obj2);
-		console.log("obj2 name: " + obj2.name);
 	
 		// item action
 		if (obj2.type === "item"){
-			console.log("item action.");
 			itemAction(obj2);
 		}
 		// NPC action
 		else if (obj2.type === "NPC"){
-			console.log("NPC action.");
 			npcAction(obj2, player.item);
 		}
 	}

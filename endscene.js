@@ -18,8 +18,6 @@ function getEndStats(){
 		achievements.push("We're your only friends. That's sad.");
 	else achievements.push("You have " + numFriends + " friends! Good for you.");
 	
-	//achievements.push("You have "+ player.int + " int and " + player.str + " str.");
-	
 	//int
 	if (player.int === 0){
 		achievements.push("0 int? I guess we can't measure your intelligence, scale won't "); 
@@ -56,8 +54,6 @@ function getEndStats(){
 
 // drawGameEnd(): Draws end game screen. 
 function drawGameEnd(){
-	console.log("drawGameEnd");
-
 	ctx.fillStyle = "rgba(100, 100, 100, 0.5)";
 	ctx.fillRect(0, 0, canvasWidth, canvasHeight);
 	
@@ -79,9 +75,6 @@ function drawGameEnd(){
 
 // drawEndPage(): Draws the end scene with all of your achievements.
 function drawEndPage(){
-	console.log("drawEndPage");
-	//drawEndPage
-	
 	var endImage = new Image();
 	endImage.src = "Images/Other/results.png";
 	endImage.onload = function(){ctx.drawImage(endImage, 0, 0)
@@ -94,7 +87,6 @@ function drawEndPage(){
 	for(var i = 0; i < achievements.length; i++){
 		ctx.fillText("HI", 0, 0);
 		ctx.fillText(achievements[i], 70, i*25 + 100);
-		console.log(achievements[i]);
 	}
 
 	};

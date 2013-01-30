@@ -3,9 +3,9 @@
 */
 
 function isComplete(){
+	// Exits if there is an NPC who hasn't recieved their item yet.
 	for(var i = 0; i < NPC.length; i++){
 		if (!NPC[i].done){
-			console.log("NPC["+i+"].done: " + NPC[i].done);
 			return;
 		}
 	}

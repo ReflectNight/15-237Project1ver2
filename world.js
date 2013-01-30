@@ -9,19 +9,18 @@ function drawTeleportMenu(){
 		ctx.font = '25pt Helvetica';
 		ctx.textAlign = "center";
 		ctx.fillStyle = "rgb(0, 0, 0)";
-		ctx.fillText("Teleporting... (0-3)", 225, 225);
+		ctx.fillText("Teleporting... (Press 0, 1, 2, or 3)", 225, 225);
 	}
 }
 
 function goToWorld(label){
 	currentWorld = label;
-	console.log("Went to world " + currentWorld);
 	if(currentWorld ===0)
-		printDialogue("You arrived at home");
+		printDialogue("You arrived at home.");
 	if(currentWorld ===1)
-		printDialogue("You arrived at the forest clearing");
+		printDialogue("You arrived at the forest clearing.");
 	if(currentWorld ===2)
-		printDialogue("You arrived at the beach");
+		printDialogue("You arrived at the beach.");
 	if(currentWorld ===3)
-		printDialogue("You arrived on the streetz...;It's suspicious ");
+		printDialogue("You arrived on the streetz...;It's suspicious. ");
 }
