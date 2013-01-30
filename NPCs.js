@@ -14,27 +14,28 @@ function isComplete(){
 }
 
 function npcAction(npc, item){
+
+	//the instructors have special cases
 	if (npc.name === "Angela"){
-		if(item === null){
-			talk(npc);
-		}
-		else if (item.ID === npc.itemID){
+		if (item.ID === npc.itemID){
 			player.item = null;
 			updateItem();
 			printDialogue(npc.name+": "+npc.acceptDialogue);
 			npc.gotRing = true;
 		}
+		else
+			talk(npc);
 	}
 	else if (npc.name === "Sarah"){
-		if(item === null){
-			talk(npc);
-		}
-		else if (item.ID === npc.itemID){
+		if (item.ID === npc.itemID){
 			player.item = null;
 			updateItem();
 			printDialogue(npc.name+": "+npc.acceptDialogue);
 			npc.gotElephant = true;
 		}
+		else 
+			talk(npc);
+
 	}
 	else if(!npc.done){
 		if (npc.int > player.int){
