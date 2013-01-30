@@ -1,5 +1,6 @@
-// endscene.js
-
+/* endscene.js
+	Handles the endscreen where everything is printed out
+*/
 //Achievements
 
 // getEndStats(): Returns a string of achievements.

@@ -1,5 +1,7 @@
-//sprites.js
-
+/*sprites.js
+	Initializes all objects and imports all items and NPCs sprites,
+	Places said objects in the world
+*/
 /***************************ITEMS***************************/
 
 	item[0].name = "Book";

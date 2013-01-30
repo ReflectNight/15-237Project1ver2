@@ -1,6 +1,6 @@
-/*
-This is to be the dialogue files
-
+/* dialogue.js
+Draws dialogue,
+prints anything that appears in the dialogue box.
 */
 
 //draws the dialogue box
@@ -13,7 +13,7 @@ function drawDialogue(){
 	return image;
 }
 
-//prints whatever it tells you to, can make it multiline
+//prints whatever it tells you to, can make it multiline with ';'
 function printDialogue(txt){
 
 	var image = drawDialogue();

@@ -1,5 +1,5 @@
 /* items.js
- * 		Contains item-related functions.
+* 		Contains item-related functions.
 */
 
 function itemAction(obj){

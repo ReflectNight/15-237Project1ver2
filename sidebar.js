@@ -1,5 +1,5 @@
 /* Sidebar.js
- * For all sidebar items
+ * For all sidebar items - includes StatBar, ItemBar, TurnBar and their updates
  */
 
 function drawStatsBar(){

@@ -1,5 +1,6 @@
-// menu.js
-
+/*menu.js
+	draws the start menu, allows the game to be run
+*/
 function drawStartPage(){
 	//background
 	/*
