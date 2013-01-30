@@ -52,7 +52,7 @@ It allowed us to see if the item on hand was the item the npc you are talking to
 
 Loops: allowed all of the npcs to be checked at once and we placed all items in the game
 
-Conditional statements: checked for stats/movement for diffent types of interaction
+Conditional statements: checked for stats/movement for different types of interaction
 and eventually to end the game.
 
 
